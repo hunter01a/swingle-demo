@@ -443,16 +443,14 @@
 
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: var(--dark);
+            background: transparent;
             color: var(--light);
             overflow: hidden;
             height: 100vh;
             position: relative;
-            padding-top: 2vh;
-            padding-bottom: 0;
+            padding: 2.5vh 0 0 0;
             box-sizing: border-box;
         }
-
         body.day-mode {
             --dark: #FFFFFF;
             --dark-secondary: #F8F9FA;
@@ -473,16 +471,18 @@
         .app-container {
             max-width: 480px;
             margin: 0 auto;
-            height: 98vh;
+            height: calc(100vh - 2.5vh);
             position: relative;
             background: var(--dark);
             display: flex;
             flex-direction: column;
-            border-radius: 20px 20px 0 0;
+            border-radius: 24px 24px 0 0;
             overflow: hidden;
-            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
-            border: 2px solid var(--neon-blue);
+            box-shadow: 0 -5px 60px rgba(0, 212, 255, 0.4), 
+                        0 0 100px rgba(255, 16, 240, 0.15);
+            border: 3px solid var(--neon-blue);
             border-bottom: none;
+        }rder-bottom: none;
         }
         /* Glass Morphism Card */
         .glass-card {
@@ -1170,6 +1170,7 @@
             overflow: hidden;
             border: 2px solid var(--glass-border);
             min-height: 0;
+            max-height: calc(100% - 140px);
         }
 
         #map {
@@ -1780,22 +1781,20 @@
 
         /* Bottom Navigation */
             .bottom-bar {
-                background: var(--dark-secondary);
-                backdrop-filter: blur(20px);
-                border-top: 2px solid var(--neon-blue);
-                position: sticky;
-                bottom: 0;
-                z-index: 999;
-                box-shadow: 0 -2px 20px rgba(0, 212, 255, 0.2);
-                flex-shrink: 0;
-                min-height: 70px;
-            }
-        .bottom-nav {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            background: var(--dark-secondary);
+            backdrop-filter: blur(20px);
+            border-top: 3px solid var(--neon-blue);
+            position: relative;
+            z-index: 999;
+            box-shadow: 0 -5px 30px rgba(0, 212, 255, 0.3);
+            flex-shrink: 0;
             padding: 0.5rem 0;
-            padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
         }
+                .bottom-nav {
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
+                    padding: 0.25rem 0;
+                }
 
         .nav-btn {
             background: none;
