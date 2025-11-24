@@ -49,12 +49,20 @@
         /* Sistema di Accesso SWINGLE */
         .access-overlay {
             position: fixed;
-            inset: 0;
+            top: 5vh;
+            bottom: 5vh;
+            left: 0;
+            right: 0;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 999999;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
         
         .access-overlay.hidden {
@@ -440,6 +448,8 @@
             overflow: hidden;
             height: 100vh;
             position: relative;
+            padding: 5vh 0;
+            box-sizing: border-box;
         }
 
         body.day-mode {
@@ -459,17 +469,19 @@
             display: none !important;
         }
 
-        /* App Container */
         .app-container {
             max-width: 480px;
             margin: 0 auto;
-            height: 100vh;
+            height: 90vh;
             position: relative;
             background: var(--dark);
             display: flex;
             flex-direction: column;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+            border: 2px solid var(--neon-blue);
         }
-
         /* Glass Morphism Card */
         .glass-card {
             background: var(--dark-card);
@@ -482,18 +494,25 @@
         /* Enhanced Tri-Tab Selection Screen */
         .tri-tab-selection {
             position: fixed;
-            inset: 0;
+            top: 5vh;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
             z-index: 10001;
             max-width: 480px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .tri-tab-selection.hidden {
-            transform: translateX(-100%);
+            transform: translateX(-50%) translateX(-100vw);
         }
 
         .logo-container {
@@ -656,10 +675,13 @@
             display: none;
             padding: 2rem;
             max-width: 480px;
-            margin: 0 auto;
-            height: 100vh;
+            margin: 5vh auto;
+            height: 90vh;
             overflow-y: auto;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            border-radius: 20px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .professional-setup.active {
@@ -671,10 +693,13 @@
             display: none;
             padding: 2rem;
             max-width: 480px;
-            margin: 0 auto;
-            height: 100vh;
+            margin: 5vh auto;
+            height: 90vh;
             overflow-y: auto;
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            border-radius: 20px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .venue-setup.active {
@@ -766,15 +791,21 @@
         /* Onboarding Screen */
         .onboarding-screen {
             position: fixed;
-            inset: 0;
+            top: 5vh;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 20px);
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
             z-index: 10000;
             max-width: 480px;
-            margin: 0 auto;
             padding: 2rem;
             overflow-y: auto;
             display: none;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 20px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .onboarding-screen.active {
@@ -784,7 +815,11 @@
         /* Setup Loading */
         .setup-loading {
             position: fixed;
-            inset: 0;
+            top: 5vh;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 20px);
             background: var(--dark);
             display: none;
             align-items: center;
@@ -792,7 +827,9 @@
             z-index: 10002;
             flex-direction: column;
             max-width: 480px;
-            margin: 0 auto;
+            border-radius: 20px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .setup-loading.active {
@@ -831,7 +868,11 @@
         /* Final Loading */
         .final-loading {
             position: fixed;
-            inset: 0;
+            top: 5vh;
+            bottom: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 20px);
             background: var(--dark);
             display: none;
             align-items: center;
@@ -839,7 +880,9 @@
             z-index: 10002;
             flex-direction: column;
             max-width: 480px;
-            margin: 0 auto;
+            border-radius: 20px;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
         }
 
         .final-loading.active {
@@ -2306,6 +2349,32 @@
             transform: translateX(-50%) translateY(0);
             opacity: 1;
         }
+        /* Background esterno visibile */
+        html {
+            background: linear-gradient(135deg, #050810 0%, #0A0E1A 50%, #0F1320 100%);
+            min-height: 100vh;
+        }
+
+        /* Glow effect sul bordo app */
+        @keyframes borderGlow {
+            0%, 100% { 
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 
+                            0 0 60px rgba(255, 16, 240, 0.1); 
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 16, 240, 0.3), 
+                            0 0 80px rgba(0, 212, 255, 0.1); 
+            }
+        }
+
+        .app-container,
+        .tri-tab-selection,
+        .onboarding-screen,
+        .access-overlay,
+        .professional-setup.active,
+        .venue-setup.active {
+            animation: borderGlow 4s ease-in-out infinite;
+        }
 
         /* Leaflet Custom */
         .leaflet-container {
@@ -2383,6 +2452,10 @@
         @keyframes particleFall {
             0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
             100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        /* Leaflet Custom */
+        .leaflet-container {
+            background: var(--dark-secondary);
         }
     </style>
 </head>
