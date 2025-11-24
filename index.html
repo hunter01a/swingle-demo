@@ -2271,17 +2271,27 @@
             <div class="nda-modal-icon">⚠️</div>
             <div class="nda-modal-title">ACCORDO DI RISERVATEZZA</div>
             <div class="nda-modal-text">
-                <p><strong>ATTENZIONE:</strong> Stai per accedere a una demo riservata di SWINGLE contenente informazioni sensibili e proprietarie.</p>
-                
-                <p><strong>Impegnandoti ad accettare, confermi di:</strong></p>
-                <ul>
-                    <li>Non divulgare a terzi le informazioni visualizzate</li>
-                    <li>Non fotografare, registrare o catturare schermate</li>
-                    <li>Non condividere le credenziali di accesso</li>
-                    <li>Utilizzare la demo esclusivamente per scopi di valutazione</li>
-                </ul>
-                
-                <p><strong>Confermi di accettare questi termini vincolanti?</strong></p>
+                <div style="text-align: left; line-height: 1.6;">
+                    <p style="margin-bottom: 1rem; font-weight: 600; text-align: center;">ACCORDO DI RISERVATEZZA E NON DIVULGAZIONE</p>
+                    
+                    <p style="margin-bottom: 1rem;">Gentile utente, sta per accedere alla demo riservata di <strong>SWINGLE</strong>, piattaforma proprietaria in fase di sviluppo da parte di LuxLab.</p>
+                    
+                    <p style="margin-bottom: 1rem;"><strong>Prendendo visione del presente materiale, Lei si impegna a:</strong></p>
+                    
+                    <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.1);">
+                        <p style="margin-bottom: 0.5rem;">• <strong>Mantenere la riservatezza</strong> di tutte le informazioni visualizzate</p>
+                        <p style="margin-bottom: 0.5rem;">• <strong>Non effettuare</strong> screenshot, registrazioni o riproduzioni</p>
+                        <p style="margin-bottom: 0.5rem;">• <strong>Non condividere</strong> le credenziali di accesso con terzi</p>
+                        <p style="margin-bottom: 0.5rem;">• <strong>Utilizzare la demo</strong> esclusivamente per valutazione aziendale</p>
+                        <p style="margin: 0;">• <strong>Non replicare o copiare</strong> funzionalità o design mostrati</p>
+                    </div>
+                    
+                    <p style="margin-bottom: 1rem; font-size: 0.85rem; color: #94A3B8; font-style: italic;">
+                        La violazione di questi termini comporterà l'immediata revoca dell'accesso e potrà essere perseguita legalmente secondo la normativa vigente sulla proprietà intellettuale.
+                    </p>
+                    
+                    <p style="margin: 0; text-align: center; font-weight: 600;">Accetta i termini di questo accordo di riservatezza?</p>
+                </div>
             </div>
             <div class="nda-modal-buttons">
                 <button class="nda-button decline" onclick="declineNDA()">RIFIUTO</button>
@@ -2320,7 +2330,7 @@
                 </div>
                 <div>Presentazione progetto per valutazione</div>
                 <div style="font-size: 0.75rem; color: var(--success); margin-top: 0.5rem;">
-                    Validità accesso: 18 Ottobre - 28 Ottobre 2025
+                    Validità accesso: 24 Novembre - 24 Dicembre 2025
                 </div>
             </div>
             
@@ -3341,12 +3351,12 @@
         let accessAttempts = 3;
         let ndaAccepted = false;
         
-        // Validità: 18 ottobre - 28 ottobre 2025 (lunedì sera)
-        const validityStart = new Date('2025-10-18T00:00:00');
-        const validityEnd = new Date('2025-10-28T23:59:59');
+        // Validità: 24 novembre - 24 dicembre 2025 (1 mese)
+        const validityStart = new Date('2025-11-24T00:00:00');
+        const validityEnd = new Date('2025-12-24T23:59:59');
         
         // Codice di accesso (non visibile nell'interfaccia)
-        const ACCESS_CODE = "LUXLAB2025";
+        const ACCESS_CODE = "LUXLAB888";
 
         function acceptNDA() {
             ndaAccepted = true;
