@@ -1087,11 +1087,12 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--neon-blue);
-            position: relative;
+            position: sticky;
+            top: 0;
             z-index: 1000;
             box-shadow: 0 2px 20px rgba(0, 212, 255, 0.2);
+            flex-shrink: 0;
         }
-
         .user-info-header {
             display: flex;
             align-items: center;
@@ -1166,6 +1167,7 @@
             background: var(--dark-secondary);
             overflow: hidden;
             border: 2px solid var(--glass-border);
+            min-height: 0;
         }
 
         #map {
@@ -1775,19 +1777,22 @@
         }
 
         /* Bottom Navigation */
-        .bottom-bar {
-            background: var(--dark-secondary);
-            backdrop-filter: blur(20px);
-            border-top: 2px solid var(--neon-blue);
-            position: relative;
-            z-index: 999;
-            box-shadow: 0 -2px 20px rgba(0, 212, 255, 0.2);
-        }
-
+            .bottom-bar {
+                background: var(--dark-secondary);
+                backdrop-filter: blur(20px);
+                border-top: 2px solid var(--neon-blue);
+                position: sticky;
+                bottom: 0;
+                z-index: 999;
+                box-shadow: 0 -2px 20px rgba(0, 212, 255, 0.2);
+                flex-shrink: 0;
+                min-height: 70px;
+            }
         .bottom-nav {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             padding: 0.5rem 0;
+            padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
         }
 
         .nav-btn {
