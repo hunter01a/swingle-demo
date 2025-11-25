@@ -443,12 +443,14 @@
 
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: transparent;
+            background: var(--dark);
             color: var(--light);
             overflow: hidden;
             height: 100vh;
+            height: 100dvh;
             position: relative;
-            padding: 2.5vh 0 0 0;
+            padding: 0;
+            margin: 0;
             box-sizing: border-box;
         }
         body.day-mode {
@@ -471,18 +473,13 @@
         .app-container {
             max-width: 480px;
             margin: 0 auto;
-            height: calc(100vh - 2.5vh);
+            height: 100vh;
+            height: 100dvh;
             position: relative;
             background: var(--dark);
             display: flex;
             flex-direction: column;
-            border-radius: 24px 24px 0 0;
             overflow: hidden;
-            box-shadow: 0 -5px 60px rgba(0, 212, 255, 0.4), 
-                        0 0 100px rgba(255, 16, 240, 0.15);
-            border: 3px solid var(--neon-blue);
-            border-bottom: none;
-        }rder-bottom: none;
         }
         /* Glass Morphism Card */
         .glass-card {
@@ -2354,23 +2351,6 @@
         .toast.show {
             transform: translateX(-50%) translateY(0);
             opacity: 1;
-        }
-        /* Background esterno visibile */
-        html {
-            background: linear-gradient(135deg, #050810 0%, #0A0E1A 50%, #0F1320 100%);
-            min-height: 100vh;
-        }
-
-        /* Glow effect sul bordo app */
-        @keyframes borderGlow {
-            0%, 100% { 
-                box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 
-                            0 0 60px rgba(255, 16, 240, 0.1); 
-            }
-            50% { 
-                box-shadow: 0 0 40px rgba(255, 16, 240, 0.3), 
-                            0 0 80px rgba(0, 212, 255, 0.1); 
-            }
         }
 
         .app-container,
